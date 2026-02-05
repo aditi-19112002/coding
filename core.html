@@ -323,7 +323,92 @@ footer{
     gap:25px;
   }
 }
- 
+ .stories-section,.why-section,.testimonials-section{
+  padding:100px 20px;
+  background:#f9fafb;
+}
+
+.stories,.why-grid,.testimonials{
+  max-width:1100px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
+}
+
+.story-card,.why-box,.testimonial-card{
+  background:#fff;
+  padding:26px;
+  border-radius:18px;
+  box-shadow:0 12px 30px rgba(0,0,0,0.08);
+  text-align:center;
+}
+
+.story-card img{
+  width:100%;
+  height:260px;
+  object-fit:cover;
+  border-radius:16px;
+  margin-bottom:16px;
+}
+
+.story-card span{
+  background:#fde047;
+  padding:6px 14px;
+  border-radius:20px;
+  font-size:0.85rem;
+}
+
+.testimonial-card p{
+  font-style:italic;
+  margin-bottom:12px;
+}
+
+.cta-section{
+  background:#fde047;
+  padding:90px 20px;
+  text-align:center;
+}
+
+.cta-section a{
+  display:inline-block;
+  margin-top:20px;
+  padding:14px 36px;
+  background:#000;
+  color:#fff;
+  text-decoration:none;
+  border-radius:6px;
+}
+
+.main-footer{
+  background:#111827;
+  color:#fff;
+  padding:70px 20px 30px;
+}
+
+.footer-grid{
+  max-width:1100px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:40px;
+}
+
+.main-footer a{
+  display:block;
+  color:#d1d5db;
+  text-decoration:none;
+  margin-top:8px;
+  font-size:0.9rem;
+}
+
+.main-footer p{
+  text-align:center;
+  margin-top:40px;
+  font-size:0.85rem;
+  color:#9ca3af;
+}
+
 
 
 </style>
@@ -426,6 +511,91 @@ footer{
 
   </div>
 </section>
+<!-- <section class="stories-section">
+  <h1 class="stories-title">Real Love Stories ❤️</h1>
+
+  <div class="stories">
+    <div class="story-card">
+      <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=500" />
+      <h3>Rahul & Anjali</h3>
+      <p>Matched on Matchify and found love in just 2 months.</p>
+      <span>Married</span>
+    </div>
+
+    <div class="story-card">
+      <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=500" />
+      <h3>Aman & Priya</h3>
+      <p>Perfect compatibility turned into a lifelong bond.</p>
+      <span>Engaged 💍</span>
+    </div>
+
+    <div class="story-card">
+      <img src="https://images.unsplash.com/photo-1520813792240-56fc4a3765a7?w=500" />
+      <h3>Vikram & Neha</h3>
+      <p>From first chat to forever together.</p>
+      <span>Success Story</span>
+    </div>
+  </div>
+</section> -->
+<section class="why-section">
+  <h1 style="text-align: center;">Why Choose Matchify?</h1><br><br>
+
+  <div class="why-grid">
+    <div class="why-box">
+      <h3>✔ Verified Profiles</h3>
+      <p>Every profile is manually reviewed for authenticity.</p>
+    </div>
+
+    <div class="why-box">
+      <h3>✔ Smart Matching</h3>
+      <p>AI-based compatibility matching system.</p>
+    </div>
+
+    <div class="why-box">
+      <h3>✔ Privacy First</h3>
+      <p>Your data is secure and never shared.</p>
+    </div>
+
+    <div class="why-box">
+      <h3>✔ Trusted By Millions</h3>
+      <p>Over 80L+ successful matches worldwide.</p>
+    </div>
+    <div class="why-box">
+      <h3>✔ Trusted By Millions</h3>
+      <p>Over 80L+ successful matches worldwide.</p>
+    </div>
+    <div class="why-box">
+      <h3>✔ Trusted By Millions</h3>
+      <p>Over 80L+ successful matches worldwide.</p>
+    </div>
+  </div>
+</section>
+<section class="cta-section">
+  <h1>Start Your Love Story Today 💖</h1>
+  <p>Join millions of happy couples who found love on Matchify.</p>
+  <a href="#">Create Free Profile</a>
+</section>
+<section class="testimonials-section">
+  <h1 style="text-align: center;">What Our Users Say</h1><br>
+
+  <div class="testimonials">
+    <div class="testimonial-card">
+      <p>“Matchify helped me find my soulmate effortlessly.”</p>
+      <h4>— Sneha Kapoor</h4>
+    </div>
+
+    <div class="testimonial-card">
+      <p>“The safest and most genuine platform I’ve used.”</p>
+      <h4>— Rohan Mehta</h4>
+    </div>
+
+    <div class="testimonial-card">
+      <p>“Amazing experience with real profiles and matches.”</p>
+      <h4>— Pooja Sharma</h4>
+    </div>
+  </div>
+</section>
+
 
 
 <footer>
