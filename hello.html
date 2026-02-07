@@ -6,6 +6,125 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>hello </h1>
+    <header>
+        <div class="logo">MatchMaking</div>
+        <nav>
+            <a href="">About</a>
+            <a href="">Contact</a>
+                <a href="">Login</a>
+                <a href=""id="hello">Register</a>
+        </nav>
+    </header>
+
+    <div class="win">
+        <div>
+            <h1>Welcome to MatchMaking</h1><br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate.</p><br>
+            <button>Get Started</button>
+        </div>
+        <div class="wow">
+            <img src="https://cdn.bulbapp.io/frontend/images/c96c2850-5142-486a-8a64-de836a5976c7/1" alt="">
+        </div>
+    </div>
+    <h1 style="text-align: center;">Our Some Special Pics</h1><br>
+    <div class="qin">
+        <img src="https://tse2.mm.bing.net/th/id/OIP.nRFfgfdlrXwsKryC52HQTQHaEB?pid=Api&P=0&h=180" alt="">
+        <img src="https://tse2.mm.bing.net/th/id/OIP.nRFfgfdlrXwsKryC52HQTQHaEB?pid=Api&P=0&h=180" alt="">
+        <img src="https://tse2.mm.bing.net/th/id/OIP.nRFfgfdlrXwsKryC52HQTQHaEB?pid=Api&P=0&h=180" alt="">
+        <img src="https://tse2.mm.bing.net/th/id/OIP.nRFfgfdlrXwsKryC52HQTQHaEB?pid=Api&P=0&h=180" alt="">
+    </div>
+
+    <style>
+      *{
+        margin:0;
+        padding:0;
+       
+      }
+      header{
+        display: flex;
+        background: black;
+        color:white;
+        justify-content: space-between;
+        padding: 20px;
+      }
+        nav a{
+            color:white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+        #hello{
+            background: white;
+            color:black;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        .win{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            height: 60vh;
+           
+        }
+            .win h1{
+                font-size: 48px;
+                /* margin-bottom: 20px; */
+            }
+            .win p{
+                font-size: 18px;
+                /* margin-bottom: 30px; */
+            }
+            .win button{
+                padding: 10px 20px;
+                font-size: 16px;
+                background: black;
+                color:white;
+                border:none;
+                border-radius: 10px;
+                cursor: pointer;
+            }
+                      .wow img{
+  width:320px;
+  height:350px;
+  border-radius:180px 180px 30px 30px;
+
+  
+  animation: float 3s ease-in-out infinite;
+}
+
+
+@keyframes float{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-20px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+.qin{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.qin img{
+  width:200px;
+  height:200px;                 
+  transition: all 0.5s ease; 
+  /* object-fit: cover; */
+}
+
+.qin img:hover{
+  flex: 4;
+}
+
+
+
+
+
+
+    </style>
 </body>
 </html>

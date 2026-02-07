@@ -1,11 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Media Query Example</title>
+  <style>
+
+    body{
+      margin:0;
+      font-family: Arial, sans-serif;
+    }
+
+    .box{
+      height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      font-size:32px;
+      color:white;
+    }
+
+    /* 💻 Desktop (default) */
+    .box{
+      background: green;
+    }
+
+    /* 📲 Tablet */
+    @media (max-width: 1024px){
+      .box{
+        background: blue;
+        font-size:28px;
+      }
+    }
+
+    /* 📱 Mobile */
+    @media (max-width: 600px){
+      .box{
+        background: red;
+        font-size:22px;
+      }
+    }
+
+  </style>
 </head>
 <body>
-    <h1>hello its me aditi</h1>
+
+  <div class="box">  
+    Mobile / Tablet / Desktop
+  </div>
+
 </body>
 </html>
