@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+
+body{
+  margin:0;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:linear-gradient(135deg,#667eea,#764ba2);
+  font-family:sans-serif;
+}
+
+
+.box{
+  width:250px;
+  height:420px;
+  padding:15px;
+  overflow-y:auto;
+  border-radius:20px;
+  background:rgba(255,255,255,0.15);
+  backdrop-filter:blur(15px);
+  box-shadow:0 20px 40px rgba(0,0,0,0.3);
+  scroll-behavior:smooth;
+}
+
+
+.box::-webkit-scrollbar{
+  display:none;
+}
+.box{
+  -ms-overflow-style:none;
+  scrollbar-width:none;
+}
+
+
+.box img{
+  width:100%;
+  border-radius:15px;
+  margin-bottom:15px;
+  transition:all 0.4s ease;
+  cursor:pointer;
+  box-shadow:0 10px 20px rgba(0,0,0,0.2);
+}
+
+.box img:hover{
+  transform:scale(1.08);
+  box-shadow:0 20px 30px rgba(0,0,0,0.4);
+}
+
+</style>
+</head>
+<body>
+
+<div class="box">
+  <img src="https://picsum.photos/300?1">
+  <img src="https://picsum.photos/300?2">
+  <img src="https://picsum.photos/300?3">
+  <img src="https://picsum.photos/300?4">
+  <img src="https://picsum.photos/300?5">  
+</div>
+
+</body>
+</html>
