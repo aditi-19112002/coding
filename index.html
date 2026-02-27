@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modern Card UI</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:sans-serif;
+}
+
+body{
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:#0f172a;
+}
+
+.card{
+  width:280px;
+  padding:20px;
+  border-radius:20px;
+  background:#1e293b;
+  color:white;
+  text-align:center;
+  transition:0.4s;
+  box-shadow:0 10px 25px rgba(0,0,0,0.5);
+}
+
+.card img{
+  width:100%;
+  border-radius:15px;
+}
+
+.card h3{
+  margin:15px 0 10px;
+}
+
+
+.card p{
+  font-size:14px;
+  color:#cbd5e1;
+}
+
+
+.btn{
+  margin-top:15px;
+  padding:10px 20px;
+  border:none;
+  border-radius:10px;
+  background:#38bdf8;
+  color:white;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+
+.card:hover{
+  transform:translateY(-10px) scale(1.03);
+  box-shadow:0 20px 40px rgba(56,189,248,0.4);
+}
+
+.btn:hover{
+  background:#0ea5e9;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+  <img src="https://images.unsplash.com/photo-1521335629791-ce4aec67dd47" alt="">
+  <h3>Cool Outfit</h3>
+  <p>Modern stylish design for your next look.</p>
+  <button class="btn">Shop Now</button>
+</div>
+
+</body>
+</html>
