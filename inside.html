@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>WOW Hover Text</title>
+
+<style>
+body{
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:#0f172a;
+  font-family:sans-serif;
+}
+
+
+.link{
+  position:relative;
+  text-decoration:none;
+  color:white;
+  font-size:22px;
+  letter-spacing:1px;
+  padding:5px 0;
+  transition:0.3s;
+}
+
+.link::after{
+  content:"";
+  position:absolute;
+  left:50%;
+  bottom:0;
+  width:0%;
+  height:2px;
+  background:#38bdf8;
+  transition:0.4s;
+  transform:translateX(-50%);
+}
+
+
+.link:hover{
+  color:#38bdf8;
+}
+
+.link:hover::after{
+  width:100%;
+  box-shadow:0 0 10px #38bdf8, 0 0 20px #38bdf8;
+}
+</style>
+
+</head>
+<body>
+
+<a href="#" class="link">Hover Me</a>
+
+</body>
+</html>
