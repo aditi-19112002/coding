@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Holi</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+body{
+  margin:0;
+  overflow:hidden;
+  background:black;
+}
+
+
+.particle{
+  position:absolute;
+  width:12px;
+  height:12px;
+  border-radius:50%;
+  pointer-events:none;
+  animation: fade 1s linear forwards;
+  filter: blur(2px);
+}
+
+@keyframes fade{
+  to{
+    transform: scale(2);
+    opacity:0;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<h1 class="text-white text-4xl text-center mt-10">
+  🌈 Happy Holi 🎉 <br>
+  Wishing You Colors of Joy & Happiness 💖
+</h1>
+
+<script>
+document.addEventListener("mousemove", (e)=>{
+
+  let particle = document.createElement("div");
+  particle.classList.add("particle");
+
+
+  particle.style.background = 
+    `hsl(${Math.random()*360},100%,60%)`;
+
+  particle.style.left = e.clientX + "px";
+  particle.style.top = e.clientY + "px";
+
+  document.body.appendChild(particle);
+
+  setTimeout(()=>{
+    particle.remove();
+  },1000);
+
+});
+</script>
+
+</body>
+</html>
