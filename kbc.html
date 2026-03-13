@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz Game</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gradient-to-r from-purple-900 to-indigo-900 min-h-screen flex items-center justify-center text-white">
+
+<div class="bg-black/60 p-8 rounded-xl w-[400px] text-center shadow-lg">
+
+<h1 class="text-3xl font-bold mb-6 text-yellow-400">
+🎮 Quiz Game
+</h1>
+
+<h2 id="question" class="text-lg mb-6"></h2>
+
+<div class="grid grid-cols-2 gap-4">
+<button class="option bg-blue-600 hover:bg-blue-700 p-3 rounded"></button>
+<button class="option bg-blue-600 hover:bg-blue-700 p-3 rounded"></button>
+<button class="option bg-blue-600 hover:bg-blue-700 p-3 rounded"></button>
+<button class="option bg-blue-600 hover:bg-blue-700 p-3 rounded"></button>
+</div>
+
+<p class="mt-6 text-yellow-300 font-semibold">
+Score: <span id="score">0</span>
+</p>
+
+<button onclick="nextQuestion()" 
+class="mt-4 bg-green-500 hover:bg-green-600 px-4 py-2 rounded">
+Next Question
+</button>
+
+</div>
+
+<script>
+
+const questions = [
+{
+question: "What is the capital of India?",
+options: ["Mumbai","Delhi","Kolkata","Chennai"],
+answer: "Delhi"
+},
+{
+question: "Which language runs in browser?",
+options: ["Python","Java","C++","JavaScript"],
+answer: "JavaScript"
+},
+{
+question: "Who is the Father of Computer?",
+options: ["Charles Babbage","Bill Gates","Elon Musk","Steve Jobs"],
+answer: "Charles Babbage"
+},
+{
+question: "HTML stands for?",
+options: [
+"Hyper Text Markup Language",
+"High Text Machine Language",
+"Hyper Tool Multi Language",
+"None"
+],
+answer: "Hyper Text Markup Language"
+}
+]
+
+let current = 0
+let score = 0
+
+const questionEl = document.getElementById("question")
+const options = document.querySelectorAll(".option")
+const scoreEl = document.getElementById("score")
+
+function loadQuestion(){
+
+let q = questions[current]
+
+questionEl.textContent = q.question
+
+options.forEach((btn,i)=>{
+btn.textContent = q.options[i]
+
+btn.onclick = ()=>{
+if(btn.textContent === q.answer){
+score++
+scoreEl.textContent = score
+btn.classList.add("bg-green-500")
+}
+else{
+btn.classList.add("bg-red-500")
+}
+} 
+})
+
+}
+
+function nextQuestion(){
+
+options.forEach(btn=>{
+btn.classList.remove("bg-green-500","bg-red-500")
+})
+
+current++
+
+if(current < questions.length){
+loadQuestion()
+}
+else{
+questionEl.textContent = "Game Over 🎉"
+}
+
+}
+
+loadQuestion()
+
+</script>
+
+</body>
+</html>
