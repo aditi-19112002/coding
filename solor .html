@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Solar System</title>
+</head>
+<body>
+
+<div class="solar-system">
+
+    <div class="sun"></div>
+
+    <div class="orbit mercury-orbit">
+        <div class="planet mercury"></div>
+    </div>
+
+    <div class="orbit venus-orbit">
+        <div class="planet venus"></div>
+    </div>
+
+    <div class="orbit earth-orbit">
+        <div class="planet earth"></div>
+    </div>
+
+    <div class="orbit mars-orbit">
+        <div class="planet mars"></div>
+    </div>
+
+</div>
+<style>
+    body{
+    margin:0;
+    height:100vh;
+    background:black;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.solar-system{
+    position:relative;
+    width:600px;
+    height:600px;
+}
+
+
+.sun{
+    position:absolute;
+    width:100px;
+    height:100px;
+    background:yellow;
+    border-radius:50%;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    box-shadow:0 0 40px orange;
+}
+
+.orbit{
+    position:absolute;
+    border:1px solid rgba(255,255,255,0.2);
+    border-radius:50%;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    animation:rotate linear infinite;
+}
+
+.planet{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    border-radius:50%;
+}
+
+.mercury-orbit{
+    width:150px;
+    height:150px;
+    animation-duration:4s;
+}
+
+.mercury{
+    width:10px;
+    height:10px;
+    background:gray;
+}
+
+
+.venus-orbit{
+    width:220px;
+    height:220px;
+    animation-duration:7s;
+}
+
+.venus{
+    width:14px;
+    height:14px;
+    background:orange;
+}
+
+
+.earth-orbit{
+    width:300px;
+    height:300px;
+    animation-duration:10s;
+}
+
+.earth{
+    width:16px;
+    height:16px;
+    background:blue;
+}
+
+.mars-orbit{
+    width:380px;
+    height:380px;
+    animation-duration:14s;
+}
+
+.mars{
+    width:12px;
+    height:12px;
+    background:red;
+}
+
+
+@keyframes rotate{
+    from{
+        transform:translate(-50%,-50%) rotate(0deg);
+    }
+    to{
+        transform:translate(-50%,-50%) rotate(360deg);
+    }
+}
+</style>
+</body>
+</html>
