@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marksheet</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+
+  <div class="bg-white shadow-lg rounded-lg p-8 w-full max-w-md">
+    
+    <!-- Title -->
+    <h1 class="text-2xl font-bold text-center mb-6 text-blue-600">
+      Student Marksheet
+    </h1>
+
+    <!-- Student Info -->
+    <div class="mb-4">
+      <p><span class="font-semibold">Name:</span> Aditi Keshri</p>
+      <p><span class="font-semibold">Class:</span> BCA</p>
+      <p><span class="font-semibold">Roll No:</span> 12345</p>
+    </div>
+
+    <!-- Table -->
+    <table class="w-full text-left border border-gray-300">
+      <thead class="bg-blue-500 text-white">
+        <tr>
+          <th class="p-2">Subject</th>
+          <th class="p-2">Marks</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="border">
+          <td class="p-2">Math</td>
+          <td class="p-2">85</td>
+        </tr>
+        <tr class="border">
+          <td class="p-2">Computer</td>
+          <td class="p-2">90</td>
+        </tr>
+        <tr class="border">
+          <td class="p-2">English</td>
+          <td class="p-2">78</td>
+        </tr>
+        <tr class="border">
+          <td class="p-2">Science</td>
+          <td class="p-2">88</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Result -->
+    <div class="mt-4 text-right">
+      <p class="font-semibold">Total: 341</p>
+      <p class="font-semibold text-green-600">Result: Pass</p>
+    </div>
+
+  </div>
+
+</body>
+</html>
