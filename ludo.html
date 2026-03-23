@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Modern Form</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-white min-h-screen flex items-center justify-center mt-5">
+
+  <div class="backdrop-blur-lg bg-gray-700 border border-white/30 p-8 rounded-2xl shadow-2xl w-full max-w-md text-white">
+
+    <h2 class="text-3xl font-bold text-center mb-6">Create Account</h2>
+
+    <form class="space-y-5">
+
+      
+      <div>
+        <label class="block mb-1">Full Name</label>
+        <input type="text" placeholder="Enter your name"
+          class="w-full px-4 py-2 rounded-lg bg-white/30 placeholder-white text-white focus:outline-none focus:ring-2 focus:ring-white">
+      </div>
+
+      <div>
+        <label class="block mb-1">Email</label>
+        <input type="email" placeholder="Enter your email"
+          class="w-full px-4 py-2 rounded-lg bg-white/30 placeholder-white text-white focus:outline-none focus:ring-2 focus:ring-white">
+      </div>
+
+      
+      <div>
+        <label class="block mb-1">Password</label>
+        <input type="password" placeholder="Enter password"
+          class="w-full px-4 py-2 rounded-lg bg-white/30 placeholder-white text-white focus:outline-none focus:ring-2 focus:ring-white">
+      </div>
+
+      
+      <div>
+        <label class="block mb-1">Gender</label>
+        <div class="flex gap-4">
+          <label class="flex items-center gap-1">
+            <input type="radio" name="gender"> Male
+          </label>
+          <label class="flex items-center gap-1">
+            <input type="radio" name="gender"> Female
+          </label>
+        </div>
+      </div>
+      <div>
+        <label class="block mb-1">Course</label>
+        <select class="w-full px-4 py-2 rounded-lg bg-white/30 text-white focus:outline-none focus:ring-2 focus:ring-white">
+          <option class="text-black">BCA</option>
+          <option class="text-black">MCA</option>
+          <option class="text-black">B.Tech</option>
+        </select>
+      </div>
+
+      
+      <button type="submit"
+        class="w-full bg-gray-500 text-white py-2 rounded-lg font-semibold hover:scale-105 transition duration-300">
+        Register
+      </button>
+
+    </form>
+
+  </div>
+
+</body>
+</html>

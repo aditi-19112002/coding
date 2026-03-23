@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Color</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body id="body" class="h-screen flex flex-col items-center justify-center transition-all duration-500 bg-gray-900 text-white">
+
+  <h1 class="text-3xl mb-8 font-bold">Select Your Mood </h1>
+
+  <div class="space-x-4">
+    <button onclick="setMood('happy')" class="px-4 py-2 bg-yellow-400 text-black rounded">Happy</button>
+    <button onclick="setMood('sad')" class="px-4 py-2 bg-blue-400 rounded"> Sad</button>
+    <button onclick="setMood('angry')" class="px-4 py-2 bg-red-500 rounded"> Angry</button>
+  </div>
+  
+<script>
+function setMood(mood) {
+  const body = document.getElementById("body");
+
+  if (mood === "happy") {
+    body.className = "h-screen flex flex-col items-center justify-center bg-yellow-300 text-black transition-all duration-500";
+  }
+
+  if (mood === "sad") {
+    body.className = "h-screen flex flex-col items-center justify-center bg-blue-900 text-white transition-all duration-500";
+  }
+
+  if (mood === "angry") {
+    body.className = "h-screen flex flex-col items-center justify-center bg-red-700 text-white transition-all duration-500";
+  }
+}
+</script>
+
+</body>
+</html>
