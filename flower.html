@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bloomify Dark</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease;
+    }
+    .fade-up.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+
+<body class="bg-gray-900 text-gray-200">
+
+
+<nav class="flex justify-between items-center px-8 py-4 bg-gray-800 shadow sticky top-0 z-50">
+  <h1 class="text-2xl font-semibold text-white">Bloomify</h1>
+
+  <div class="hidden md:flex gap-8 text-gray-300">
+    <a href="#" class="hover:text-pink-400 transition">Home</a>
+    <a href="#" class="hover:text-pink-400 transition">Shop</a>
+    <a href="#" class="hover:text-pink-400 transition">About</a>
+    <a href="#" class="hover:text-pink-400 transition">Contact</a>
+  </div>
+</nav>
+
+
+<section class="h-[90vh] flex items-center px-10">
+  <div class="grid md:grid-cols-2 gap-10 items-center w-full">
+
+    <div class="fade-up">
+      <h2 class="text-5xl font-bold leading-tight mb-6 text-white">
+        Fresh Flowers <br> Delivered To You
+      </h2>
+      <p class="text-gray-400 mb-6">
+        Premium quality flowers for your loved ones. Simple, elegant and beautiful.
+      </p>
+      <button class="bg-pink-600 text-white px-6 py-3 rounded-lg hover:bg-pink-700 transition">
+        Shop Now
+      </button>
+    </div>
+
+    <div class="fade-up">
+      <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946"
+           class="rounded-2xl shadow-lg">
+    </div>
+
+  </div>
+</section>
+
+<section class="px-10 py-20 bg-gray-800">
+
+  <h2 class="text-3xl font-semibold mb-12 text-center fade-up text-white">
+    Our Collection
+  </h2>
+
+  <div class="grid md:grid-cols-3 gap-10">
+
+    
+    <div class="bg-gray-900 rounded-xl shadow hover:shadow-xl transition duration-500 fade-up border border-gray-700">
+      <img src="https://images.unsplash.com/photo-1470259078422-826894b933aa"
+           class="h-60 w-full object-cover">
+      <div class="p-5">
+        <h3 class="text-lg font-semibold mb-2 text-white">Sunflower</h3>
+        <p class="text-gray-400 text-sm mb-4">Bright and cheerful flowers</p>
+        <button onclick="openModal('Sunflower','Bright and cheerful flowers','https://images.unsplash.com/photo-1470259078422-826894b933aa')" 
+        class="text-pink-400 font-medium hover:underline">
+          View Details →
+        </button>
+      </div>
+    </div>
+
+    <div class="bg-gray-900 rounded-xl shadow hover:shadow-xl transition duration-500 fade-up border border-gray-700">
+      <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6"
+           class="h-60 w-full object-cover">
+      <div class="p-5">
+        <h3 class="text-lg font-semibold mb-2 text-white">Tulip</h3>
+        <p class="text-gray-400 text-sm mb-4">Elegant colorful tulips</p>
+        <button onclick="openModal('Tulip','Elegant colorful tulips','https://images.unsplash.com/photo-1501004318641-b39e6451bec6')" 
+        class="text-pink-400 font-medium hover:underline">
+          View Details →
+        </button>
+      </div>
+    </div>
+
+    <div class="bg-gray-900 rounded-xl shadow hover:shadow-xl transition duration-500 fade-up border border-gray-700">
+      <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946"
+           class="h-60 w-full object-cover">
+      <div class="p-5">
+        <h3 class="text-lg font-semibold mb-2 text-white">Rose</h3>
+        <p class="text-gray-400 text-sm mb-4">Classic red roses</p>
+        <button onclick="openModal('Rose','Classic red roses','https://images.unsplash.com/photo-1490750967868-88aa4486c946')" 
+        class="text-pink-400 font-medium hover:underline">
+          View Details →
+        </button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<footer class="text-center py-8 border-t border-gray-700">
+  <p class="text-gray-500 text-sm">© 2026 Bloomify. All rights reserved.</p>
+</footer>
+
+
+<div id="productModal" class="fixed inset-0 bg-black/70 hidden items-center justify-center z-50">
+
+  <div class="bg-gray-900 rounded-xl max-w-md w-full p-6 relative border border-gray-700">
+
+    <button onclick="closeModal()" class="absolute top-3 right-4 text-gray-400 text-xl">✖</button>
+
+    <img id="modalImg" class="rounded-lg mb-4 w-full h-52 object-cover">
+
+    <h2 id="modalTitle" class="text-2xl font-semibold mb-2 text-white"></h2>
+
+    <p id="modalDesc" class="text-gray-400 mb-4"></p>
+
+    <button class="bg-pink-600 text-white px-5 py-2 rounded-lg hover:bg-pink-700 transition">
+      Add to Cart
+    </button>
+
+  </div>
+
+</div>
+
+<script>
+const elements = document.querySelectorAll('.fade-up');
+
+function showOnScroll() {
+  const triggerBottom = window.innerHeight * 0.85;
+
+  elements.forEach(el => {
+    const boxTop = el.getBoundingClientRect().top;
+
+    if(boxTop < triggerBottom) {
+      el.classList.add('show');
+    }
+  });
+}
+
+window.addEventListener('scroll', showOnScroll);
+showOnScroll();
+
+function openModal(title, desc, img) {
+  const modal = document.getElementById("productModal");
+  modal.classList.remove("hidden");
+  modal.classList.add("flex");
+
+  document.getElementById("modalTitle").innerText = title;
+  document.getElementById("modalDesc").innerText = desc;
+  document.getElementById("modalImg").src = img;
+}
+
+function closeModal() {
+  const modal = document.getElementById("productModal");
+  modal.classList.add("hidden");
+  modal.classList.remove("flex");
+}
+</script>
+
+</body>
+</html>
