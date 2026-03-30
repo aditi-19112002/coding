@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cafe System </title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 p-6 flex justify-center">
+
+
+  <div class="w-full max-w-3xl">
+
+  
+    <h1 class="text-3xl font-bold text-center mb-8">☕ Cafe Management</h1>
+
+    <div class="grid md:grid-cols-2 gap-6">
+
+     
+      <div class="bg-white p-5 rounded-xl shadow">
+        <h2 class="text-lg font-semibold mb-4">Menu</h2>
+
+        <div class="flex justify-between items-center mb-3">
+          <span>Coffee ☕ - ₹100</span>
+          <button onclick="addItem('Coffee',100)" class="bg-green-500 hover:bg-green-600 text-white px-3 py-1 rounded">Add</button>
+        </div>
+
+        <div class="flex justify-between items-center mb-3">
+          <span>Tea 🍵 - ₹50</span>
+          <button onclick="addItem('Tea',50)" class="bg-green-500 hover:bg-green-600 text-white px-3 py-1 rounded">Add</button>
+        </div>
+
+        <div class="flex justify-between items-center mb-3">
+          <span>Burger 🍔 - ₹120</span>
+          <button onclick="addItem('Burger',120)" class="bg-green-500 hover:bg-green-600 text-white px-3 py-1 rounded">Add</button>
+        </div>
+
+      </div>
+
+     
+      <div class="bg-white p-5 rounded-xl shadow">
+        <h2 class="text-lg font-semibold mb-4">🛒 Cart</h2>
+
+        <div id="cartItems"></div>
+
+        <div class="mt-5 text-lg font-bold">
+          Total: ₹<span id="total">0</span>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+<script>
+  let cart = [];
+
+  function addItem(name, price) {
+    let item = cart.find(i => i.name === name);
+
+    if (item) {
+      item.qty++;
+    } else {
+      cart.push({ name, price, qty: 1 });
+    }
+
+    updateCart();
+  }
+
+  function changeQty(name, change) {
+    let item = cart.find(i => i.name === name);
+    item.qty += change;
+
+    if (item.qty <= 0) {
+      cart = cart.filter(i => i.name !== name);
+    }
+
+    updateCart();
+  }
+
+  function updateCart() {
+    let cartDiv = document.getElementById("cartItems");
+    let total = 0;
+    cartDiv.innerHTML = "";
+
+    cart.forEach(item => {
+      total += item.price * item.qty;
+
+      cartDiv.innerHTML += `
+        <div class="flex justify-between items-center mb-3 border-b pb-2">
+          <div>
+            <p class="font-semibold">${item.name}</p>
+            <p class="text-sm text-gray-500">₹${item.price}</p>
+          </div>
+
+          <div class="flex items-center gap-2">
+            <button onclick="changeQty('${item.name}', -1)" class="bg-red-500 text-white px-2 rounded">-</button>
+            <span>${item.qty}</span>
+            <button onclick="changeQty('${item.name}', 1)" class="bg-green-500 text-white px-2 rounded">+</button>
+          </div>
+        </div>
+      `;
+    });
+
+    document.getElementById("total").textContent = total;
+  }
+</script>
+
+</body>
+</html>
