@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Background Demo</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100">
+  <div class="bg-transparent border p-4">
+  Transparent Background
+</div>
+  <div class="h-screen bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 flex items-center justify-center text-white text-3xl font-bold">
+  WOW Background 🔥
+</div>
+<div class="relative h-screen bg-[url('https://images.unsplash.com/photo-1506744038136-46273834b3fb')] bg-cover">
+
+  <!-- Overlay -->
+  <div class="absolute relative inset-0 bg-black/60"></div>
+
+  <!-- Content -->
+  <div class="text-center text-black text-2xl p-10">
+    <h1>My Website</h1>
+  </div>
+
+</div>
+  <!-- Hero Section -->
+  <div class="h-screen bg-[url('https://images.unsplash.com/photo-1506744038136-46273834b3fb')] bg-cover bg-center relative">
+
+    <!-- Overlay -->
+<div class="bg-[url('image.jpg')] h-64 flex items-center justify-center">
+  
+  <div class="bg-black/50 text-white p-4 rounded">
+    This text is readable on image 👍
+  </div>
+
+</div>
+    <!-- Content -->
+    <div class="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-6">
+      
+      <h1 class="text-4xl md:text-6xl font-bold mb-4">
+        Beautiful Background
+      </h1>
+
+      <p class="text-lg md:text-xl mb-6 max-w-xl">
+        This is a professional Tailwind CSS background example with image, overlay, and responsive design.
+      </p>
+
+      <button class="bg-pink-500 hover:bg-pink-600 px-6 py-3 rounded-full text-lg font-semibold transition">
+        Get Started
+      </button>
+
+    </div>
+  </div>
+
+  <!-- Gradient Section -->
+  <div class="h-64 bg-gradient-to-r from-purple-500 via-indigo-500 to-blue-500 flex items-center justify-center text-white text-2xl font-bold">
+    Gradient Background Section
+  </div>
+
+  <!-- Simple Cards Section -->
+  <div class="p-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+    
+    <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition">
+      <h2 class="text-xl font-bold mb-2">Card 1</h2>
+      <p>Clean white background card.</p>
+    </div>
+
+    <div class="bg-blue-500 text-white p-6 rounded-lg shadow-lg hover:shadow-xl transition">
+      <h2 class="text-xl font-bold mb-2">Card 2</h2>
+      <p>Colored background card.</p>
+    </div>
+
+    <div class="bg-black/80 text-white p-6 rounded-lg shadow-lg hover:shadow-xl transition">
+      <h2 class="text-xl font-bold mb-2">Card 3</h2>
+      <p>Opacity background card.</p>
+    </div>
+
+  </div>
+
+</body>
+</html>

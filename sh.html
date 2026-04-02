@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shadow Example</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 p-10">
+
+  <h1 class="text-2xl font-bold mb-6">Tailwind Shadow Demo</h1>
+
+  <div class="grid grid-cols-3 gap-6">
+
+    <div class="bg-white p-6 shadow-sm">Small Shadow</div>
+
+    <div class="bg-white p-6 shadow-md">Medium Shadow</div>
+
+    <div class="bg-white p-6 shadow-lg">Large Shadow</div>
+
+    <div class="bg-white p-6 shadow-xl">Extra Large</div>
+
+    <div class="bg-white p-6 shadow-2xl">2XL Shadow</div>
+
+    <div class="bg-white p-6 shadow-inner">Inner Shadow</div> 
+
+  </div>
+
+  <button class="bg-blue-500 text-white px-4 py-2 hover:bg-red-500">
+  Hover Me
+</button>
+<div class="w-40 h-40 bg-green-400 hover:bg-yellow-400 hover:scale-110 hover:rounded-xl transition duration-300">
+</div>
+<hr class="border-t-2 border-gray-300 my-4">
+<div class="flex divide-x divide-gray-400">
+  <div class="px-4">Item 1</div>
+  <div class="px-4">Item 2</div>
+  <div class="px-4">Item 3</div>
+</div>
+
+<div class="divide-y divide-gray-400">
+  <div class="p-4">Row 1</div>
+  <div class="p-4">Row 2</div>
+  <div class="p-4">Row 3</div>
+</div>
+<div class="h-[2px] bg-gradient-to-r from-transparent via-blue-500 to-transparent my-6"></div>
+<div class="flex items-center my-6">
+  <div class="flex-grow border-t border-gray-300"></div>
+  <span class="mx-4 text-gray-500">OR</span>
+  <div class="flex-grow border-t border-gray-300"></div>
+</div>
+
+<div class="h-[2px] bg-blue-500 shadow-[0_0_10px_#3b82f6 ] my-6"></div>
+</body>
+</html>
