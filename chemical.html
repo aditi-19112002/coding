@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chemical Formulas</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #4facfe, #00f2fe);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      width: 90%;
+      max-width: 500px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .formula {
+      background: #f8f9fa;
+      padding: 15px;
+      margin: 10px 0;
+      border-radius: 10px;
+      font-size: 24px;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+
+    .formula:hover {
+      background: #e3f2fd;
+      transform: scale(1.05);
+    }
+
+    sub {
+      color: blue;
+      font-size: 16px;
+    }
+
+    sup {
+      color: red;
+      font-size: 16px;
+    }
+
+    .label {
+      font-size: 14px;
+      color: gray;
+      margin-top: 5px;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>🧪 Chemical Formulas</h1>
+
+    <div class="formula">
+    H<sub>2</sub>o
+      <div class="label">Water</div>
+    </div>
+
+    <div class="formula">
+   Co<sub>2</sub>
+      <div class="label">Carbon Dioxide</div>
+    </div>
+
+    <div class="formula">
+    H<sub>2</sub>S0<sub>4</sub>
+      <div class="label">Sulfuric Acid</div>
+    </div>
+
+    <div class="formula">
+   NH<sub>4</sub><sup>+</sup>
+      <div class="label">Ammonium Ion</div>
+    </div>
+
+    <div class="formula">
+    So<sub>4</sub><sup>2-</sup>`
+      <div class="label">Sulfate Ion</div>
+    </div>
+
+    <div class="formula">
+  CaCo<sub>3</sub>
+      <div class="label">Calcium Carbonate</div>
+    </div>
+
+  </div>
+  
+
+</body>
+</html>
