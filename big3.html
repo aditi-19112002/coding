@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Color Generator</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      font-family: Arial, sans-serif;
+      transition: 0.5s;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    button {
+      padding: 12px 25px;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      background: black;
+      color: white;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #444;
+    }
+
+    .color-code {
+      margin-top: 15px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Color Generator</h1>
+  
+  <button onclick="changeColor()">Change Color</button>
+
+  <div class="color-code" id="code">#ffffff</div>
+
+  <script>
+    function changeColor() {
+      let color = "#" + Math.floor(Math.random() * 16777215).toString(16).padStart(6, '0');
+      document.body.style.background = color;
+      document.getElementById("code").innerText = color;
+    }
+  </script>
+
+</body>
+</html>
