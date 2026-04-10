@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Span Grid</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 p-6">
+
+  <h1 class="text-2xl font-bold text-center mb-6">
+    Responsive Grid with Row & Column Span
+  </h1>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
+
+    <!-- Big Box -->
+    <div class="bg-red-400 text-white p-6 text-center 
+                md:col-span-2 md:row-span-2">
+      Big Box (2x2)
+    </div>
+
+    <!-- Normal Boxes -->
+    <div class="bg-blue-300 p-6 text-center">Box 1</div>
+    <div class="bg-green-300 p-6 text-center">Box 2</div>
+    <div class="bg-yellow-300 p-6 text-center">Box 3</div>
+    <div class="bg-purple-300 p-6 text-center">Box 4</div>
+
+    <!-- Wide Box -->
+    <div class="bg-pink-300 p-6 text-center md:col-span-2">
+      Wide Box
+    </div>
+
+  </div>
+
+</body>
+</html>

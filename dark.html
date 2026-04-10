@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Live Search Filter</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+ 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+</head>
+
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+
+  <div class="bg-white p-6 rounded-2xl shadow-lg w-80">
+    
+    <h2 class="text-xl font-bold mb-4 text-center">🔍 Search Fruits</h2>
+
+  
+    <div class="flex items-center border rounded-lg px-3 py-2 mb-4">
+      <i class="bi bi-search text-gray-500 mr-2"></i>
+      
+      <input 
+        type="text" 
+        id="search" 
+        placeholder="Search..." 
+        class="w-full outline-none"
+      >
+
+    
+      <button onclick="refreshList()" class="ml-2 text-blue-500">
+        <i class="bi bi-arrow-clockwise"></i>
+      </button>
+    </div>
+
+  
+    <ul id="list" class="space-y-2">
+
+      <li class="flex items-center gap-2 p-2 bg-gray-50 rounded-lg">
+        <i class="bi bi-apple text-red-500"></i> Apple
+      </li>
+
+      <li class="flex items-center gap-2 p-2 bg-gray-50 rounded-lg">
+        <i class="bi bi-circle-fill text-yellow-400"></i> Banana
+      </li>
+
+      <li class="flex items-center gap-2 p-2 bg-gray-50 rounded-lg">
+        <i class="bi bi-circle-fill text-orange-400"></i> Mango
+      </li>
+
+      <li class="flex items-center gap-2 p-2 bg-gray-50 rounded-lg">
+        <i class="bi bi-circle-fill text-orange-500"></i> Orange
+      </li>
+
+      <li class="flex items-center gap-2 p-2 bg-gray-50 rounded-lg">
+        <i class="bi bi-circle-fill text-green-500"></i> Grapes
+      </li>
+
+      <li class="flex items-center gap-2 p-2 bg-gray-50 rounded-lg">
+        <i class="bi bi-circle-fill text-yellow-500"></i> Pineapple
+      </li>
+
+    </ul>
+
+  </div>
+
+  <script>
+    let search = document.getElementById("search");
+    let items = document.querySelectorAll("#list li");
+
+  
+    search.addEventListener("keyup", function() {
+      let value = search.value.toLowerCase();
+
+      items.forEach(function(item) {
+        let text = item.innerText.toLowerCase();
+
+        if (text.includes(value)) {
+          item.style.display = "flex";
+        } else {
+          item.style.display = "none";
+        }
+      });
+    });
+
+   
+    function refreshList() {
+      search.value = ""; 
+
+      items.forEach(function(item) {
+        item.style.display = "flex"; 
+      });
+    }
+  </script>
+
+</body>
+</html>
