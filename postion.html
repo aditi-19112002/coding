@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <script src="https://cdn.tailwindcss.com"></script>
+  
+</head>
+<body>
+    <div class="static bg-blue-200 p-4">Static Position</div>
+    <div class="relative bg-green-200 p-4">
+  Parent (relative)
+</div>
+
+<div class="relative bg-green-200 p-4 h-40">
+  Parent
+
+  <div class="absolute top-0 right-0 bg-red-400 p-2">
+    Child
+  </div>
+</div>
+<div class="fixed bottom-0 right-0 bg-black text-white p-3">
+  Fixed Box
+</div>
+
+<div class="h-[1500px]">
+
+  <div class="sticky top-0 bg-yellow-300 p-3">
+    Sticky Header
+  </div>
+
+  <p class="mt-10">
+    Scroll down... Scroll down...
+  </p>
+
+</div>
+</body>
+</html>' '

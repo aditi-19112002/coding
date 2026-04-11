@@ -1,19 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-     <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8">
+  <title>To-Do List</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 </head>
-<body>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-6">
-<div class="bg-blue-500 p-6 rounded-lg"></div>
-<div class="bg-blue-500 p-6 rounded-lg"></div>
-<div class="bg-blue-500 p-6 rounded-lg"></div>
-<div class="bg-blue-500 p-6 rounded-lg"></div>
-<div class="bg-blue-500 p-6 rounded-lg"></div>
-<div class="bg-blue-500 p-6 rounded-lg"></div>
+
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+
+  <div class="bg-white p-6 rounded-2xl shadow-lg w-96">
+
+    <h2 class="text-xl font-bold text-center mb-4">📝 To-Do List</h2>
+
+    <!-- Input -->
+    <div class="flex gap-2 mb-4">
+      <input 
+        type="text" 
+        id="task" 
+        placeholder="Enter task..." 
+        class="w-full p-2 border rounded-lg outline-none"
+      >
+
+      <button onclick="addTask()" 
+        class="bg-blue-500 text-white px-4 rounded-lg">
+        Add
+      </button>
     </div>
+
+    <!-- List -->
+    <ul id="list" class="space-y-2"></ul>
+
+  </div>
+
+  <script>
+    function addTask() {
+      let task = document.getElementById("task").value;
+
+      if (task === "") {
+        alert("Please enter a task");
+        return;
+      }
+
+      let li = document.createElement("li");
+      li.className = "flex justify-between items-center bg-gray-50 p-2 rounded-lg";
+
+      li.innerHTML = `
+        <span>${task}</span>
+        <button onclick="deleteTask(this)" class="text-red-500">
+          <i class="bi bi-trash"></i>
+        </button>
+      `;
+
+      document.getElementById("list").appendChild(li);
+
+      document.getElementById("task").value = "";
+    }
+
+    function deleteTask(btn) {
+      btn.parentElement.remove();
+    }
+  </script>
+
 </body>
 </html>
