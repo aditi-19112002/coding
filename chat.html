@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Chat Box</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 flex justify-center items-center h-screen">
+
+
+  <div class="w-full max-w-sm bg-white rounded-xl shadow-lg flex flex-col">
+
+
+    <div class="bg-green-500 text-white p-3 rounded-t-xl   flex items-center gap-2 font-semibold">
+      <img src="aditi.jpg" alt="" class=" w-8 h-8 rounded-full">
+      <span class="font-semibold">Aditi Keshri</span>
+    </div>
+
+    <div class="p-3 space-y-2 h-64 overflow-y-auto">
+
+      <div class="bg-gray-200 px-3 py-2 rounded-lg w-fit">
+        Hello 👋
+      </div>
+
+      <div class="bg-green-500 text-white px-3 py-2 rounded-lg w-fit ml-auto">
+        Hi! How are you?
+      </div>
+
+      <div class="bg-gray-200 px-3 py-2 rounded-lg w-fit">
+        I'm good 👍
+      </div>
+ <div class="bg-green-500 text-white px-3 py-2 rounded-lg w-fit ml-auto">
+        Great to hear!
+      </div>
+       
+
+
+    </div>
+
+   
+    <div class="p-2 border-t flex gap-2">
+      <input 
+        type="text" 
+        placeholder="Type..." 
+        class="flex-1 border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-400"
+      >
+      <button class="bg-green-500 text-white px-4 rounded-full hover:bg-green-600">
+           ➤
+      </button>
+    </div>
+
+  </div>
+
+</body>
+</html>
